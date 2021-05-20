@@ -1,0 +1,28 @@
+Largest tag = 2 ^ 29 - 1
+Cannot use tag 19000 - 19999 - reserved by Google
+Tags numbered from:
+ 1 to 15 use 1 byte in space
+ 16 to 2047 use 2 bytes in space
+
+field for List is "repeated"
+
+// Single line comment
+/* Multi line comment */
+
+Default value of fields are as follows:
+
+bool : false
+number ( int 32 etc ) : 0
+string : empty string
+bytes : empty bytes
+enum : first value  , enum must start by tag 0 (which is Default value)
+repeated : empty List
+
+No strict checking on the values ( no restriction on values)
+
+protoc -I=proto --python_out=python proto/date.proto
+-I = root directory where proto file is saved
+python_out = python directory where the file would be created
+
+protoc -I=proto --java_out=java proto/date.proto
+creates DateOuterClass.java

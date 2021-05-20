@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "self/import-with-packages/street.proto";
+message Building{
+
+    string building_name = 1;
+    int32 building_number = 2;    
+    // import street from package street.
+    street.Street street = 3;
+}
+
+
+
+

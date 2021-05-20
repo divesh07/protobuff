@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package my.date;
+
+// Person's birthday
+message Date {
+    // Year of date , must be positive int from 1 to 9999 , if so would be 
+    // considered date without year.
+    int32 year = 1;
+
+    // Month of year. Must be from 1 to 12.
+    int32 month = 2;
+
+    // Day of month , must be between 1 to 31.
+    int32 day = 3;
+}

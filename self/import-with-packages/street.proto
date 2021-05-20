@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "self/import-with-packages/city.proto";
+package street;
+
+message Street{
+    string street_name = 1;
+    // import city from package city
+    city.City city = 2;
+}
+
+
+}
+
+
+
+

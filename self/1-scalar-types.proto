@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+message Person {
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4;
+    bool is_profile_verified = 5;
+    float height = 6;
+}
+
+message LatLong {
+    // Latitude in degrees. Value must be in range [ -90 to +90]
+    double Latitude = 1;
+
+    // Longitude in degrees . Value must be in range [ -180 to +180]
+    double Longitude = 2;
+}
+
+message Money {
+    //The 3 letter currency code defined in ISO 4217.
+    string currency_code = 1;
+
+    //The whole units of ammount.
+    int32 integral_ammount = 2;
+
+    int32 nano = 3;
+}
+
+message DayOfWeek {
+    enum Day{
+        undefined = 0;
+        monday = 1;
+        tuesday = 2;
+        wednesday = 3;
+        thursday = 4;
+        friday = 5;
+        saturday = 6;
+        sunday = 7;
+    }
+    Day day = 1;
+}
