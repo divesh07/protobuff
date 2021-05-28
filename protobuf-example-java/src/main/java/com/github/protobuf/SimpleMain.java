@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
-import example.simple.Simple;
 import example.simple.Simple.SimpleMessage;
 
 public class SimpleMain {

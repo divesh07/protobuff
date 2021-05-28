@@ -12,7 +12,7 @@ field for List is "repeated"
 Default value of fields are as follows:
 
 bool : false
-number ( int 32 etc ) : 0
+number ( int 32 etc ) : 0 
 string : empty string
 bytes : empty bytes
 enum : first value  , enum must start by tag 0 (which is Default value)
@@ -26,3 +26,13 @@ python_out = python directory where the file would be created
 
 protoc -I=proto --java_out=java proto/date.proto
 creates DateOuterClass.java
+
+Suports both forward and backward compatibility
+- Reserve a tag and field name to avoid conflicts when removing fields
+- cant mix tags and field name in same reserved statement.
+
+- Alternate to remove a field is to mark it OBSOLETE_field_name
+
+- If a field is missing ,Default would be assumed.
+- Default ensures fiels have non null values.
+

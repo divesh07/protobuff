@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package example.simple;
+
+// Create classes in this package
+option java_package = 'com.example.options';
+
+// Creates classes in multiple files
+option java_multiple_files = true;
+
+message OptionMessageTest {
+    int32 id = 1;
+    bool is_simple = 2;
+    string name = 3;
+    repeated int32 sample_list = 4;
+}
+
+message OptionMessageOther {
+    int32 id = 1;
+    bool is_simple = 2;
+}
